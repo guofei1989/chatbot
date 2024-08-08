@@ -1,4 +1,5 @@
 import requests
+import json
 
 '''
 # post 无json
@@ -48,3 +49,4 @@ with open(file_name,'w',encoding='utf-8')as file:
 
 print(response.text)
 print(response.status_code)
+
