@@ -6,16 +6,17 @@ from json_to_markdown import json_to_markdown
 
 load_dotenv("chatbot/.env")
 
-#key
+# key
 WX_TOKEN = os.environ.get("WX_TOKEN")
 JINA_TOKEN = os.environ.get("JINA_TOKEN")
 
 
 if __name__ == "__main__":
-    #get_article_urls('chuanjibang', WX_TOKEN, cursor=None)
-    json_to_markdown('D:\chatbot\json','chuanjibang')
+    # get_article_urls("chuanjibang", WX_TOKEN, cursor=None)
+    # output_dir = "D:\chatbot\json"
+    output_dir = "./json"
+    json_to_markdown(output_dir, "chuanjibang")
 
 """
 D:\chatbot\json是保存的文件夹路径,要换成你实际的
 """
-

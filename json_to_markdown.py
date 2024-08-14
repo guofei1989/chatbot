@@ -38,7 +38,11 @@ def json_to_markdown(json_files_dir,wxid):
             title1 = data.get('title', 'Untitled')
 
             # URL保存为Markdown
-            URL_to_markdown(art_url,wxid,title1,JINA_TOKEN)
+            try:
+                URL_to_markdown(art_url,wxid,title1,JINA_TOKEN)
+            except Exception as e:
+                print(f"Error processing {filename}: {e}")
+                continue
 
         else:
             print(f"No art_url found in {filename}")
